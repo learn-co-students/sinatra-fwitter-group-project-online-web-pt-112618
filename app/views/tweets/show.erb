@@ -1,0 +1,5 @@
+<p><%= @tweet.content %></p>
+      <% if authorized_to_edit?(@tweet) %>
+      <a href="/tweets/<%= @tweet.id %>/edit"> Edit Entry</a>
+      <a href="/tweets/<%= @tweet.id %>/delete"> Delete Entry</a>
+<% end %>
