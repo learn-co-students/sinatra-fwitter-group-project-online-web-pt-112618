@@ -10,9 +10,9 @@ class UsersController < ApplicationController
   post '/signup' do
     #we use "new" because we want to save only user has name, email and passwrod
     @user = User.new(params)
-    if !User.where({email: @user.email}).empty?
-      redirect "/login"
-    end
+    # if !User.where({email: @user.email}).empty?
+    #   redirect "/login"
+    # end
 
     if
       @user.save && !@user.username.empty? && !@user.email.empty?
