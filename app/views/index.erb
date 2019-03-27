@@ -1,0 +1,7 @@
+<!-- # index action logged in lets a user view the tweets index if logged in -->
+<% if logged_in? %>
+  <% redirect "/tweets" %>
+<% end %>
+
+  <a href="/logout">Log out</a>
+  <a href="/tweets/new">Create a new tweet</a>
