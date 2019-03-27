@@ -1,0 +1,11 @@
+<h1>all a single users tweet</h1>
+
+<!-- show all a single users tweets -->
+<% @users.each do |user| %>
+  <h3><%= user.username %></h3>
+  <% user.tweets.each do |tweet| %>
+    <ul>
+      <li><%= tweet.content %></li>
+    </ul>
+ <% end %>
+<% end %>
